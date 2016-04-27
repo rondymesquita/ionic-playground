@@ -1,0 +1,20 @@
+<ion-view view-title="Motion">
+
+  <ion-content class="padding">
+      <h3>X: {{x}}</h3>
+	  <h3>Y: {{y}}</h3>
+	  <h3>Z: {{z}}</h3>
+      <h3>TimeStamp: {{timeStamp}}</h3>
+
+      <div class="row">
+          <div class="col">
+              <button class="button button-block button-positive" on-touch="start()">Start</button>
+          </div>
+          <div class="col">
+              <button class="button button-block button-assertive" on-touch="stop()">Stop</button>
+          </div>
+      </div>
+
+
+  </ion-content>
+</ion-view>
