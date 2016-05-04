@@ -1,33 +1,34 @@
-app.controller('BaseController', function($scope, $ionicPlatform, $ionicSlideBoxDelegate) {
+app.controller('BaseController', function($scope, $ionicPlatform, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
 
-	$scope.options = {
-		loop: false,
-		// effect: 'fade',
-		speed: 200,
+	// $scope.options = {
+	// 	loop: false,
+	// 	// effect: 'fade',
+	// 	speed: 200
+	// };
+	// $scope.data = {};
+	// $scope.$watch('data.slider.activeIndex', function(nv, ov) {
+	// 	$scope.slider = $scope.data.slider;
+	// 	//console.log("eita");
+	// });
+	//
+	// $scope.$on('data.slider.slideChanged', function (event, index) {
+	//     console.debug('Slide box has been changed, current index is ' + index);
+	// });
+
+	$scope.slidePage = function(index){
+
+		// if($scope.data.slider){
+		// 	$scope.data.slider.slideTo(index, $scope.options.speed);
+		// }
+$ionicSlideBoxDelegate.slideIsDisabled = true;
+		$ionicSlideBoxDelegate.select(index);
+		console.log($ionicSlideBoxDelegate);
 	};
-	$scope.data = {};
-	$scope.$watch('data.slider', function(nv, ov) {
-		// console.log("changed");
-		$scope.slider = $scope.data.slider;
-		//console.log(nv);
-	});
 
 	$scope.slideChanged = function(index){
-		console.log(index);
+		$ionicTabsDelegate.select(index);
+		console.log($ionicTabsDelegate);
 	}
 
-	console.log($ionicSlideBoxDelegate);
-
-	$scope.$on('slideBox.slideChanged', function (event, index) {
-	    console.debug('Slide box has been changed, current index is ' + index);
-	});
-
-	$scope.left = function() {
-		console.log("left");
-	};
-
-	$scope.right = function() {
-		console.log("right");
-	};
 
 });

@@ -18,17 +18,28 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         url: '/status',
         views: {
             'tab-status': {
-                url: '/status',
+                // url: '/status',
                 templateUrl: 'templates/tab-status.html',
                 controller: 'StatusCtrl'
-            },
+            }
+            ,
             'tab-camera': {
-                url: '/camera',
+                // url: '/camera',
                 templateUrl: 'templates/tab-camera.html',
                 controller: 'CameraCtrl'
+            },
+            'tab-barcode': {
+                // url: '/barcode',
+                templateUrl: 'templates/tab-barcode.html',
+                controller: 'BarcodeCtrl'
+            },
+            'tab-motion': {
+                // url: '/motion',
+                templateUrl: 'templates/tab-motion.html',
+                controller: 'MotionCtrl'
             }
         }
-    })
+    });
     // .state('tab.camera', {
     //     url: '/camera',
     //     views: {
@@ -38,42 +49,26 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     //         }
     //     }
     // })
-    .state('tab.barcode', {
-        url: '/barcode',
-        views: {
-            'tab-barcode': {
-                templateUrl: 'templates/tab-barcode.html',
-                controller: 'BarcodeCtrl'
-            }
-        }
-    })
-    .state('tab.motion', {
-        url: '/motion',
-        views: {
-            'tab-motion': {
-                templateUrl: 'templates/tab-motion.html',
-                controller: 'MotionCtrl'
-            }
-        }
-    })
-    .state('tab.chat-detail', {
-        url: '/chats/:chatId',
-        views: {
-            'tab-chats': {
-                templateUrl: 'templates/chat-detail.html',
-                controller: 'ChatDetailCtrl'
-            }
-        }
-    })
-    .state('tab.account', {
-        url: '/account',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/tab-account.html',
-                controller: 'AccountCtrl'
-            }
-        }
-    });
+    // .state('tab.barcode', {
+    //     url: '/barcode',
+    //     views: {
+    //         'tab-barcode': {
+    //             templateUrl: 'templates/tab-barcode.html',
+    //             controller: 'BarcodeCtrl'
+    //         }
+    //     }
+    // })
+    // .state('tab.motion', {
+    //     url: '/motion',
+    //     views: {
+    //         'tab-motion': {
+    //             templateUrl: 'templates/tab-motion.html',
+    //             controller: 'MotionCtrl'
+    //         }
+    //     }
+    // })
+
+    //console.log($stateProvider);
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/status');

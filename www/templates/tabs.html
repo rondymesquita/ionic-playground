@@ -25,25 +25,61 @@ navigation history that also transitions its views in and out.
 
 <ion-tabs class="tabs-icon-top tabs-color-active-positive" data-rel="slide">
 
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/status">
+  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" on-select="slidePage(0)">
   </ion-tab>
 
-  <ion-tab title="Camera" icon-off="ion-ios-camera-outline" icon-on="ion-ios-camera" href="#/tab/camera">
+  <ion-tab title="Camera" icon-off="ion-ios-camera-outline" icon-on="ion-ios-camera" on-select="slidePage(1)">
+  </ion-tab>
+
+  <ion-tab title="Barcode" icon-off="ion-ios-barcode-outline" icon-on="ion-ios-barcode" on-select="slidePage(2)">
+  </ion-tab>
+
+  <ion-tab title="Motion" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" on-select="slidePage(3)">
   </ion-tab>
 
 </ion-tabs>
 
 
-  <ion-content class="padding has-tabs-top" data-rel="tab">
-    <ion-slides options="options" slider="data.slider" on-slide-changed="slideChanged(index)">
+<!-- <ion-content class="padding has-tabs-top" data-rel="tab">
+  <ion-slides options="options" slider="data.slider" on-slide-changed="slideChanged(index)">
 
-      <ion-slide-page>
-        <ion-nav-view name="tab-status"></ion-nav-view>
-      </ion-slide-page>
+    <ion-slide-page name="status">
+      <ion-nav-view name="tab-status"></ion-nav-view>
+    </ion-slide-page>
 
-      <ion-slide-page>
-        <ion-nav-view name="tab-camera"></ion-nav-view>
-      </ion-slide-page>
+    <ion-slide-page name="camera">
+      <ion-nav-view name="tab-camera"></ion-nav-view>
+    </ion-slide-page>
 
-    </ion-slides>
-  </ion-content>
+    <ion-slide-page>
+      <ion-nav-view name="tab-barcode"></ion-nav-view>
+    </ion-slide-page>
+
+    <ion-slide-page>
+      <ion-nav-view name="tab-motion"></ion-nav-view>
+    </ion-slide-page>
+
+  </ion-slides>
+</ion-content> -->
+
+<ion-content class="padding has-tabs-top content-slide" scroll="false">
+  <ion-slide-box options="options" slider="data.slider" on-slide-changed="slideChanged(index)" show-pager="false">
+
+    <ion-slide>
+      <ion-nav-view name="tab-status"></ion-nav-view>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-nav-view name="tab-camera"></ion-nav-view>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-nav-view name="tab-barcode"></ion-nav-view>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-nav-view name="tab-motion"></ion-nav-view>
+    </ion-slide>
+
+  </ion-slide-box>
+</ion-content>

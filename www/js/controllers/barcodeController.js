@@ -1,6 +1,6 @@
 app.controller('BarcodeCtrl', function($scope, $ionicPlatform, $cordovaBarcodeScanner) {
 
-	$scope.data;
+	$scope.data = undefined;
 
 	$scope.scan = function(){
 		$cordovaBarcodeScanner
