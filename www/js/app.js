@@ -21,4 +21,8 @@ var app = angular.module('starter', ['ionic','ngCordova'])
       StatusBar.styleDefault();
     }
   });
+}).config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+    //$ionicConfigProvider.tabs.position('top');
+
 });

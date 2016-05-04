@@ -62,7 +62,7 @@ navigation history that also transitions its views in and out.
   </ion-slides>
 </ion-content> -->
 
-<ion-content class="padding has-tabs-top content-slide" scroll="false">
+<ion-content class="padding content-slide" ng-class="{'has-tabs-top':platform == 'android'}" scroll="false">
   <ion-slide-box options="options" slider="data.slider" on-slide-changed="slideChanged(index)" show-pager="false">
 
     <ion-slide>

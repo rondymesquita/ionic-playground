@@ -1,5 +1,7 @@
 app.controller('BaseController', function($scope, $ionicPlatform, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
 
+	$scope.platform = ionic.Platform.platform();
+
 	// $scope.options = {
 	// 	loop: false,
 	// 	// effect: 'fade',
@@ -20,7 +22,7 @@ app.controller('BaseController', function($scope, $ionicPlatform, $ionicSlideBox
 		// if($scope.data.slider){
 		// 	$scope.data.slider.slideTo(index, $scope.options.speed);
 		// }
-$ionicSlideBoxDelegate.slideIsDisabled = true;
+
 		$ionicSlideBoxDelegate.select(index);
 		console.log($ionicSlideBoxDelegate);
 	};
