@@ -6,10 +6,10 @@ app.controller('BarcodeCtrl', function($scope, $ionicPlatform, $cordovaBarcodeSc
 		$cordovaBarcodeScanner
 		.scan()
 		.then(function(data) {
-			console.log(JSON.stringify(data));
+			// console.log(JSON.stringify(data));
 			$scope.data = data;
 		}, function(error) {
-			console.log(JSON.stringify(error));
+			// console.log(JSON.stringify(error));
 			$scope.data = error;
 		});
 	};

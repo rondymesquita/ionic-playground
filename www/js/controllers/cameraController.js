@@ -21,7 +21,7 @@ var options = {
             image.src = "data:image/jpeg;base64," + imageData;
 
           }, function(err) {
-            console.log(JSON.stringify(err));
+            // console.log(JSON.stringify(err));
           });
       });
 

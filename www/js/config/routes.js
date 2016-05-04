@@ -18,20 +18,26 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         url: '/status',
         views: {
             'tab-status': {
+                url: '/status',
                 templateUrl: 'templates/tab-status.html',
                 controller: 'StatusCtrl'
-            }
-        }
-    })
-    .state('tab.camera', {
-        url: '/camera',
-        views: {
+            },
             'tab-camera': {
+                url: '/camera',
                 templateUrl: 'templates/tab-camera.html',
                 controller: 'CameraCtrl'
             }
         }
     })
+    // .state('tab.camera', {
+    //     url: '/camera',
+    //     views: {
+    //         'tab-camera': {
+    //             templateUrl: 'templates/tab-camera.html',
+    //             controller: 'CameraCtrl'
+    //         }
+    //     }
+    // })
     .state('tab.barcode', {
         url: '/barcode',
         views: {
