@@ -1,4 +1,4 @@
-<ion-view view-title="Status">
+<!-- <ion-view view-title="Status">
   <ion-content class="padding">
       <button class="button button-block button-energized" on-touch="showAlert()">
         Alert
@@ -13,4 +13,39 @@
       </button>
 
   </ion-content>
+</ion-view> -->
+
+
+<ion-view view-title="Status">
+  <ion-content class="padding">
+
+<ion-slides  options="options" slider="data.slider">
+  <ion-slide-page>
+    <div class="box first"><h1>BLUE</h1></div>
+  </ion-slide-page>
+  <ion-slide-page>
+    <div class="box second"><h1>YELLOW</h1></div>
+  </ion-slide-page>
+  <ion-slide-page>
+    <div class="box third"><h1>RED</h1></div>
+  </ion-slide-page>
+</ion-slides>
+
+
+  </ion-content>
 </ion-view>
+
+<style>
+    .box{
+        height: 100%;
+    }
+    .first{
+        background-color: green;
+    }
+    .second{
+        background-color: purple;
+    }
+    .third{
+        background-color: orange;
+    }
+</style>
