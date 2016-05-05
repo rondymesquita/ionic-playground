@@ -11,6 +11,7 @@ var options = {
         saveToPhotoAlbum: false
     };
 
+    $scope.hasImage = false;
 
   $scope.takePicture = function(){
 
@@ -19,8 +20,11 @@ var options = {
 
             var image = document.getElementById('myImage');
             image.src = "data:image/jpeg;base64," + imageData;
+            $scope.hasImage = true;
 
           }, function(err) {
+              $scope.hasImage = false;
+              //image.src = err;
             // console.log(JSON.stringify(err));
           });
       });

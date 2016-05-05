@@ -3,15 +3,22 @@
 // -------------------------------
 
 $light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
+// $stable:                          #f8f8f8 !default;
 // $positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
+// $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
-$positive:                        #444 !default;
+
+$stable:                          #ccc !default;
+$positive:                        #005ca1 !default;
+$balanced:                        #5db530 !default;
+
+$dark-gradient:                     $positive !default;
+$medium-gradient:                   #2F8969 !default;
+$light-gradient:                    $balanced !default;
 
 // Base
 // -------------------------------

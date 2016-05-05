@@ -12,8 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         abstract: true,
         templateUrl: 'templates/tabs.html'
     })
-    .state('tab.status', {
-        url: '/status',
+    .state('tab.main', {
+        url: '/main',
         views: {
             'tab-status': {
                 // url: '/status',
@@ -22,7 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             }
             ,
             'tab-camera': {
-                // url: '/camera',
+                url: '/camera',
                 templateUrl: 'templates/tab-camera.html',
                 controller: 'CameraCtrl'
             },
@@ -38,37 +38,10 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             }
         }
     });
-    // .state('tab.camera', {
-    //     url: '/camera',
-    //     views: {
-    //         'tab-camera': {
-    //             templateUrl: 'templates/tab-camera.html',
-    //             controller: 'CameraCtrl'
-    //         }
-    //     }
-    // })
-    // .state('tab.barcode', {
-    //     url: '/barcode',
-    //     views: {
-    //         'tab-barcode': {
-    //             templateUrl: 'templates/tab-barcode.html',
-    //             controller: 'BarcodeCtrl'
-    //         }
-    //     }
-    // })
-    // .state('tab.motion', {
-    //     url: '/motion',
-    //     views: {
-    //         'tab-motion': {
-    //             templateUrl: 'templates/tab-motion.html',
-    //             controller: 'MotionCtrl'
-    //         }
-    //     }
-    // })
 
     //console.log($stateProvider);
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/status');
+  $urlRouterProvider.otherwise('/tab/main');
 
 });

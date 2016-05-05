@@ -1,35 +1,17 @@
-app.controller('BaseController', function($scope, $ionicPlatform, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
+app.controller('BaseController', function($scope, $rootScope, $ionicPlatform, $ionicSlideBoxDelegate, $ionicTabsDelegate, $ionicNavBarDelegate) {
 
 	$scope.platform = ionic.Platform.platform();
+	$scope.isAndroid = true;
+	$scope.title = "";
 
-	// $scope.options = {
-	// 	loop: false,
-	// 	// effect: 'fade',
-	// 	speed: 200
-	// };
-	// $scope.data = {};
-	// $scope.$watch('data.slider.activeIndex', function(nv, ov) {
-	// 	$scope.slider = $scope.data.slider;
-	// 	//console.log("eita");
-	// });
-	//
-	// $scope.$on('data.slider.slideChanged', function (event, index) {
-	//     console.debug('Slide box has been changed, current index is ' + index);
-	// });
-
-	$scope.slidePage = function(index){
-
-		// if($scope.data.slider){
-		// 	$scope.data.slider.slideTo(index, $scope.options.speed);
-		// }
+	$scope.currentTab = function(index, title){
 
 		$ionicSlideBoxDelegate.select(index);
-		console.log($ionicSlideBoxDelegate);
+		$scope.title = title;
 	};
 
 	$scope.slideChanged = function(index){
 		$ionicTabsDelegate.select(index);
-		console.log($ionicTabsDelegate);
 	}
 
 

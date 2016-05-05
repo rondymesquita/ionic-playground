@@ -120,6 +120,14 @@
       background-image: linear-gradient(180deg, $bar-dark-border, $bar-dark-border 50%, transparent 50%);
     }
   }
+  &.bar-gradient-dark-to-medium {
+    @include bar-style($bar-dark-bg, $bar-dark-border, $bar-dark-text);
+    background: linear-gradient(to bottom, $dark-gradient 0%, $medium-gradient 100%) !important;
+    &.bar-footer{
+      background-image: linear-gradient(180deg, $bar-dark-border, $bar-dark-border 50%, transparent 50%);
+    }
+  }
+
 
   // Title inside of a bar is centered
   .title {

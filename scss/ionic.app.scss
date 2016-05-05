@@ -14,49 +14,56 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
 .platform-android {
-
-	.tabs{
-
-		box-shadow: 0 -2px 6px 3px #444 !important;
-		border-bottom:none;
-
+	.tabs {
+		box-shadow: 0 -3px 6px 3px #444 !important;
+		border-bottom-color: $light-gradient;
 		.tab-item {
-
 			font-size: 14px !important;
-	        text-transform: uppercase !important;
-	        line-height: 48px !important;
+			text-transform: uppercase !important;
+			line-height: 48px !important;
+			margin-top: 1px;
 
-			.icon{
-	        	display: none !important;
-	    	}
+			&.tab-item-active{
+				border-width: 0px 0px 4px 0px !important;
+			}
+			.icon {
+				display: none !important;
+			}
 		}
 	}
+	.scroll-content {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
-
-.placeholder{
-    background-color: #eee;
-    height: 300px;
-    width:300px;
-    margin: 10px auto;
-    display:block;
-    border-radius:5px;
-    border: 4px dashed #444;
+.placeholder {
+	background-color: #eee;
+	height: 300px;
+	width: 100%;
+	display: block;
+	border-radius: 5px;
+	border: 4px dashed #444;
 }
-
-.button-bottom{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 5px !important;
+.no-margin {
+	margin: 0 !important;
 }
-.ion-icon-large{
+.ion-icon-large {
 	font-size: 1.5em;
 	line-height: 1.9em;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+.flex-spacer{
+    flex: 1;
+}
+
+.flex-bottom{
+    flex: 0;
 }
