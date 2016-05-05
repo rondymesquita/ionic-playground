@@ -20,3 +20,24 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+.platform-android {
+
+	.tabs{
+
+		box-shadow: 0 -2px 6px 3px #444 !important;
+		border-bottom:none;
+
+		.tab-item {
+
+			font-size: 14px !important;
+	        text-transform: uppercase !important;
+	        line-height: 48px !important;
+
+			.icon{
+	        	display: none !important;
+	    	}
+		}
+	}
+
+}

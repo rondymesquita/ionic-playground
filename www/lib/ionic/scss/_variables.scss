@@ -11,23 +11,23 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
-$positive:                        #886aea !default;
+$positive:                        #444 !default;
 
 // Base
 // -------------------------------
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Regular.ttf);
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Roboto-Light";
-    src: url(../fonts/Roboto-Light.ttf);
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
 }
 
-$font-family-sans-serif:           '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !default;
+$font-family-sans-serif:          "Roboto", "Segoe UI", sans-serif !default;
 
-$font-family-light-sans-serif:    '-apple-system', "HelveticaNeue-Light", "Roboto-Light", "Segoe UI-Light", sans-serif-light !default;
+$font-family-light-sans-serif:    "Roboto-Light", "Segoe UI-Light", sans-serif-light !default;
 $font-family-serif:               serif !default;
 $font-family-monospace:           monospace !default;
 
