@@ -39,5 +39,24 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	    	}
 		}
 	}
+}
 
+.placeholder{
+    background-color: #eee;
+    height: 300px;
+    width:300px;
+    margin: 10px auto;
+    display:block;
+    border-radius:5px;
+    border: 4px dashed #444;
+}
+
+.button-bottom{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px !important;
+}
+.ion-icon-large{
+	font-size: 1.5em;
+	line-height: 1.9em;
 }

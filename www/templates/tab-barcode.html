@@ -1,11 +1,13 @@
 <ion-view view-title="Barcode">
 
-  <ion-content class="padding" scroll="false">
+  <ion-content class="" scroll="false">
       <img id="myImage" ng-src="{{image}}"/>
 	  <p>
 		{{data}}
 	  </p>
-      <button class="button button-block button-positive" on-touch="scan()">Scan</button>
+      <button class="button button-full button-large button-positive button-bottom" on-touch="scan()">
+          <i class="ion-qr-scanner ion-icon-large"></i>
+      </button>
 
   </ion-content>
 </ion-view>
