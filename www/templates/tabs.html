@@ -13,16 +13,16 @@
   <ion-tab title="Motion" ng-attr-icon="{{platform != 'android' ? 'ion-ios-gear' : 'undefined'}}"  on-select="slidePage(3, 'Motion')">
   </ion-tab> -->
 
-  <ion-tab title="Status" ng-attr-icon="{{platform != 'android' ? 'ion-ios-pulse' : 'undefined'}}" on-select="currentTab(0, 'Status')">
+  <ion-tab title="Status" ng-attr-icon-on="{{platform != 'android' ? 'ion-ios-pulse-strong' : 'undefined'}}" ng-attr-icon-off="{{platform != 'android' ? 'ion-ios-pulse' : 'undefined'}}" on-select="currentTab(0, 'Status')">
   </ion-tab>
 
-  <ion-tab title="Camera" ng-attr-icon="{{platform != 'android' ? 'ion-ios-camera' : 'undefined'}}" on-select="currentTab(1, 'Camera')">
+  <ion-tab title="Camera" ng-attr-icon-on="{{platform != 'android' ? 'ion-ios-camera' : 'undefined'}}" ng-attr-icon-off="{{platform != 'android' ? 'ion-ios-camera-outline' : 'undefined'}}" on-select="currentTab(1, 'Camera')">
   </ion-tab>
 
-  <ion-tab title="Barcode" ng-attr-icon="{{platform != 'android' ? 'ion-ios-barcode' : 'undefined'}}"  on-select="currentTab(2, 'Barcode')">
+  <ion-tab title="Barcode" ng-attr-icon-on="{{platform != 'android' ? 'ion-ios-barcode' : 'undefined'}}" ng-attr-icon-off="{{platform != 'android' ? 'ion-ios-barcode-outline' : 'undefined'}}" on-select="currentTab(2, 'Barcode')">
   </ion-tab>
 
-  <ion-tab title="Motion" ng-attr-icon="{{platform != 'android' ? 'ion-ios-gear' : 'undefined'}}"  on-select="currentTab(3, 'Motion')">
+  <ion-tab title="Motion" ng-attr-icon-on="{{platform != 'android' ? 'ion-ios-gear' : 'undefined'}}" ng-attr-icon-off="{{platform != 'android' ? 'ion-ios-gear-outline' : 'undefined'}}"  on-select="currentTab(3, 'Motion')">
   </ion-tab>
 
 </ion-tabs>
